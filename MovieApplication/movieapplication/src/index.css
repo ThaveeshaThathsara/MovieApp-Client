@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+body {
+  @apply  bg-gray-900 ;
+}
+
+.app {
+  @apply flex flex-col items-center justify-center py-16;
+}
+
+h1 {
+  @apply text-4xl font-bold ;
+}
+
+/* .nav a {
+  @apply text-white hover:underline;
+} */
+
+.search {
+  @apply flex items-center justify-center w-full p-4 mb-8 bg-gray-800 rounded-full shadow-lg;
+}
+
+.search input {
+  @apply flex-grow px-4 text-white placeholder-gray-400 bg-gray-800 outline-none;
+}
+
+.search img {
+  @apply w-8 h-8 cursor-pointer;
+}
+
+.empty h2 {
+  @apply  text-orange-400;
+}
+
+.container {
+  @apply flex flex-wrap items-center justify-center mt-8;
+}
+
+.movie {
+  @apply relative m-6 overflow-hidden transition-transform transform border-none rounded-lg shadow-lg w-80 h-96 hover:scale-105;
+}
+
+.movie div:nth-of-type(1) {
+  @apply absolute top-0 w-full p-4 text-orange-400 opacity-0;
+}
+
+.movie:hover div:nth-of-type(1) {
+  @apply opacity-100;
+}
+
+.movie div:nth-of-type(2) {
+  @apply w-full h-full;
+}
+
+.movie div:nth-of-type(2) img {
+  @apply w-full h-full;
+}
+
+.movie div:nth-of-type(3) {
+  @apply absolute bottom-0 left-0 right-0 p-4 bg-gray-700;
+}
+
+.movie div:nth-of-type(3) span {
+  @apply text-xs font-semibold tracking-wide text-white uppercase;
+}
+
+.movie div:nth-of-type(3) h3 {
+  @apply mt-1 text-orange-400 font-roboto;
+}
+
+@media (max-width: 600px) {
+  .app {
+    @apply px-8 py-16;
+  }
+
+  .search {
+    @apply w-full p-4;
+  }
+
+  .search input {
+    @apply text-sm;
+  }
+
+  .search img {
+    @apply w-5 h-5;
+  }
+}
+
+@media (max-width: 400px) {
+  .app {
+    @apply px-4 py-16;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  .container {
+    @apply mt-8;
+  }
+
+  .movie {
+    @apply w-full m-4;
+  }
+}
